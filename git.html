@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git &#8212; Real-time and embedded data systems</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction to VHDL" href="vhdl.html" />
+    <link rel="prev" title="Welcome to your FYS4220" href="intro.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/fys4220_logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Real-time and embedded data systems</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your FYS4220
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  General information
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Git
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  General information 2
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="vhdl.html">
+   Introduction to VHDL
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/git.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#">
+   Git
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#using-git-for-fys4220">
+   Using Git for FYS4220
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#submitting-the-project-assignments">
+   <em>
+    Submitting the project assignments:
+   </em>
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-tag-a-lab1-part1-m-completed-part-1-of-lab-1">
+   git tag -a lab1-part1 -m “Completed part 1 of lab 1”
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#git-push-origin-lab1-part1">
+   git push origin lab1-part1
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#where-lab1-part1-is-the-name-of-the-tag-id">
+   where lab1-part1 is the name of the tag id.
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="git">
+<h1>Git<a class="headerlink" href="#git" title="Permalink to this headline">¶</a></h1>
+<p>This course will use “<a class="reference external" href="http://Github.uio.no">Github.uio.no</a>”:”<a class="reference external" href="https://github.uio.no">https://github.uio.no</a>” for distribution, organization and submission of the laboratory exercise.</p>
+<p>There is no need to become and expert Git user, and the most common commands you will use are:</p>
+<ul class="simple">
+<li><p>git clone</p></li>
+<li><p>git add</p></li>
+<li><p>git commit</p></li>
+<li><p>git tag</p></li>
+<li><p>git pull</p></li>
+<li><p>git push</p></li>
+<li><p>git status</p></li>
+</ul>
+<p>A list of basic Git command can be found here: “Basic Git commands from Atlassian”:”<a class="reference external" href="https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html">https://confluence.atlassian.com/bitbucketserver/basic-git-commands-776639767.html</a>”
+<linebreak></p>
+<p>Other sources of information on Git:</p>
+<ul class="simple">
+<li><p>“Learn Git with Github’s interactive tutorial”:”<a class="reference external" href="http://try.github.io">http://try.github.io</a>”</p></li>
+<li><p>“Informasjon on Github at UiO (Norwegian only)”:”<a class="reference external" href="http://www.uio.no/tjenester/it/maskin/filer/versjonskontroll/github.html">http://www.uio.no/tjenester/it/maskin/filer/versjonskontroll/github.html</a>”</p></li>
+<li><p>“Git tutorials from Atlassian”:”<a class="reference external" href="https://www.atlassian.com/git/tutorials/">https://www.atlassian.com/git/tutorials/</a>”</p></li>
+<li><p>“Pro Git”:”<a class="reference external" href="https://git-scm.com/book/en/v2">https://git-scm.com/book/en/v2</a>”</p></li>
+<li><p>“Tutorials from Atlassian”:”<a class="reference external" href="https://www.atlassian.com/git/tutorials/">https://www.atlassian.com/git/tutorials/</a>”</p></li>
+<li><p>“Git Reference”:”<a class="reference external" href="http://git.github.io/git-reference/">http://git.github.io/git-reference/</a>”</p></li>
+<li><p>“Become a Git pro in just one blog. A thorough guide to Git architecture and command line interface”:”<a class="reference external" href="https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395">https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395</a>”</p></li>
+</ul>
+</div>
+<div class="section" id="using-git-for-fys4220">
+<h1>Using Git for FYS4220<a class="headerlink" href="#using-git-for-fys4220" title="Permalink to this headline">¶</a></h1>
+<p>If it is the first time you are using Git on a computer you should “Tell Git who you are”:</p>
+<p>!bc
+git config –global <a class="reference external" href="http://user.name">user.name</a> “Sam Smith”
+git config –global user.email sam&#64;example
+!ec</p>
+<p>Please use you UiO e-mail address.</p>
+<p><em>A normal command line based working flow:</em></p>
+<ul class="simple">
+<li><p>Login to <a class="reference external" href="http://Github.uio.no">Github.uio.no</a></p></li>
+<li><p>Clone your repository <em>fys4220-lastname-firstname</em>:
+!bc
+git clone <a class="reference external" href="https://github.uio.no/fys4220-2020/fys4220-lastname-firstname.git">https://github.uio.no/fys4220-2020/fys4220-lastname-firstname.git</a>
+!ec</p></li>
+<li><p>Edit and save a file (e.g. <a class="reference external" href="http://README.md">README.md</a>).</p></li>
+<li><p>Commit the change with a relevant/informative message:
+!bc
+git commit -am “Made changes to file <a class="reference external" href="http://README.md">README.md</a>”
+!ec</p></li>
+<li><p>Push these changes to the remote repository on <a class="reference external" href="http://Github.uio.no">Github.uio.no</a>:
+!bc
+git push origin master
+!ec</p></li>
+<li><p>The local copy of the repository can now be deleted if wanted.</p></li>
+</ul>
+<p><em>Git on windows:</em></p>
+<ul class="simple">
+<li><p>On the windows computers in the FYS4220 lab. (V329) we have installed “git for Windows”:”<a class="reference external" href="https://git-for-windows.github.io">https://git-for-windows.github.io</a>”.</p></li>
+<li><p>Git for Windows provides a BASH emulation <em>Git BASH</em> used to run Git from the command line. Behaves just like the “git” command in LINUX.</p></li>
+<li><p>It also provides a graphical user interface <em>Git GUI</em>. However, we recommend to use the command line interface to get familiar to the basic Git commands.</p></li>
+<li><p>There should be a link to <em>Git BASH</em> on the desktop. Double click on <em>Git BAS</em>, navigate to an appropriate directory and clone your <a class="reference external" href="http://Github.uio.no">Github.uio.no</a> repository. The default path when starting <em>Git BASH</em> is typically your UiO home directory (often disk M).</p></li>
+</ul>
+</div>
+<div class="section" id="submitting-the-project-assignments">
+<h1><em>Submitting the project assignments:</em><a class="headerlink" href="#submitting-the-project-assignments" title="Permalink to this headline">¶</a></h1>
+<p>#Submitting an assignment is simply done by creating a tag to mark/identify the code/project that you are submitting for evaluation, e.g:</p>
+</div>
+<div class="section" id="git-tag-a-lab1-part1-m-completed-part-1-of-lab-1">
+<h1>git tag -a lab1-part1 -m “Completed part 1 of lab 1”<a class="headerlink" href="#git-tag-a-lab1-part1-m-completed-part-1-of-lab-1" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="git-push-origin-lab1-part1">
+<h1>git push origin lab1-part1<a class="headerlink" href="#git-push-origin-lab1-part1" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="where-lab1-part1-is-the-name-of-the-tag-id">
+<h1>where lab1-part1 is the name of the tag id.<a class="headerlink" href="#where-lab1-part1-is-the-name-of-the-tag-id" title="Permalink to this headline">¶</a></h1>
+</div>
+<div class="section" id="id1">
+<h1><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h1>
+<p>#Information on when to tag and and which tag name to be used will be given in the as part of the lab. instructions.</p>
+</div>
+<div class="section" id="id2">
+<h1><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h1>
+<p>#<em>Submitting lab. exercises:</em>
+#* Submitting a lab. exercise is simply done creating a tag to mark/identify the code/project that you are submitting #for evaluation, e.g:
+#<code class="docutils literal notranslate"> <span class="pre">#git</span> <span class="pre">tag</span> <span class="pre">-a</span> <span class="pre">lab1-part1</span> <span class="pre">-m</span> <span class="pre">&quot;Completed</span> <span class="pre">part</span> <span class="pre">1</span> <span class="pre">of</span> <span class="pre">lab</span> <span class="pre">1&quot;</span> <span class="pre">#git</span> <span class="pre">push</span> <span class="pre">origin</span> <span class="pre">lab1-part1</span> <span class="pre">#</span></code>
+#where <em>lab1-part1</em> is the name of the tag id.
+#* Information on when to tag and and which tag name to be used will be given in the as part of the lab. instructions.</p>
+<p>======= Working with issues =======</p>
+<ul class="simple">
+<li><p>An overview of how to use issues can be found here: “<a class="reference external" href="https://help.github.com/articles/managing-your-work-with-issues/%22:%22https://help.github.com/articles/managing-your-work-with-issues/">https://help.github.com/articles/managing-your-work-with-issues/”:”https://help.github.com/articles/managing-your-work-with-issues/</a>”.</p></li>
+</ul>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">Welcome to your FYS4220</a>
+    <a class='right-next' id="next-link" href="vhdl.html" title="next page">Introduction to VHDL</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Ketil Røed<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
